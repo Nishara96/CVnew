@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <title>Nishara Hansinee</title>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
-/*style header*/
+
 * {
   box-sizing: border-box;
 }
+/*Style the head*/
+head{
 
-
+   font-family: Calibri, Helvetica, sans-serif;
+}
 /* Style the body */
 body {
   
@@ -43,7 +44,8 @@ font-family: , Helvetica, sans-serif;
 .row {  
   display: -ms-flexbox; /* IE10 */
   display: flex;
-  
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
 }
 
 /* Create two unequal columns that sits next to each other */
@@ -52,7 +54,7 @@ font-family: , Helvetica, sans-serif;
   -ms-flex: 40%; /* IE10 */
   flex: 30%;
   background-color:;
- 
+  padding: 20px;
   border: 2px solid black;
   padding: 30px;
 background-image:url("green.jpg");
@@ -68,7 +70,7 @@ color:white;
   -ms-flex: 70%; /* IE10 */
   flex: 70%;
   
-
+  padding: 20px;
   border: 2px solid black;
   padding: 30px;
   background-image:url("white.jpeg");
@@ -81,6 +83,21 @@ color:white;
 
 }
 
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
 }
 </style>
 
@@ -154,8 +171,5 @@ color:white;
     
   </div>
 </div>
-
-
-
 </body>
 </html>
